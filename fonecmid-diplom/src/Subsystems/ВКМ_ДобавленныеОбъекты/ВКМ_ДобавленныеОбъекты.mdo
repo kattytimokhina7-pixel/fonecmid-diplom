@@ -9,4 +9,10 @@
   <content>Document.ВКМ_ОбслуживаниеКлиента</content>
   <content>Catalog.ВКМ_ОбслуживаниеКлиентаПрисоединенныеФайлы</content>
   <content>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</content>
+  <content>Constant.ВКМ_ТокенТелеграмБота</content>
+  <content>Constant.ВКМ_ИдентификаторГруппыТелеграм</content>
+  <content>CommonModule.ВКМ_ТелеграмВызовСервера</content>
+  <content>Catalog.ВКМ_УведомленияТелеграмБоту</content>
+  <content>ScheduledJob.ВКМ_ОтправкаУведомленийТелеграм</content>
+  <content>Role.ВКМ_РаботаСОбслуживаниемКлиентов</content>
 </mdclass:Subsystem>
