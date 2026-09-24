@@ -412,10 +412,10 @@
     </attributes>
   </tabularSections>
   <templates uuid="c6862283-2964-4f44-9e01-50b04aab99b5">
-    <name>ВКМ_ПФ_MXL_АктОказанныхУслуг</name>
+    <name>ВКМ_ПФ_MXL_АктОбОказанныхУслугах</name>
     <synonym>
       <key>ru</key>
-      <value>Акт оказанных услуг</value>
+      <value>Акт об оказанных услугах</value>
     </synonym>
   </templates>
 </mdclass:Document>
