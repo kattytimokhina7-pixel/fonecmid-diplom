@@ -17,10 +17,10 @@
   <dataLockControlMode>Managed</dataLockControlMode>
   <enableTotalsSplitting>true</enableTotalsSplitting>
   <resources uuid="a402e830-47f4-4f50-ab72-abdb6fc9a5ec">
-    <name>ВКМ_КоличествоЧасов</name>
+    <name>КоличествоЧасов</name>
     <synonym>
       <key>ru</key>
-      <value>ВКМ количество часов</value>
+      <value>Количество часов</value>
     </synonym>
     <type>
       <types>Number</types>
@@ -34,10 +34,10 @@
     <fullTextSearch>Use</fullTextSearch>
   </resources>
   <resources uuid="385baf6e-9d43-453a-ab88-8f9fddaef569">
-    <name>ВКМ_СуммаКОплате</name>
+    <name>СуммаКОплате</name>
     <synonym>
       <key>ru</key>
-      <value>ВКМ сумма к оплате</value>
+      <value>Сумма к оплате</value>
     </synonym>
     <type>
       <types>Number</types>
@@ -51,10 +51,10 @@
     <fullTextSearch>Use</fullTextSearch>
   </resources>
   <dimensions uuid="9b75db6b-678b-4a0a-8e9e-ef5542f1a36a">
-    <name>ВКМ_Клиент</name>
+    <name>Клиент</name>
     <synonym>
       <key>ru</key>
-      <value>ВКМ клиент</value>
+      <value>Клиент</value>
     </synonym>
     <type>
       <types>CatalogRef.Контрагенты</types>
@@ -65,10 +65,10 @@
     <useInTotals>true</useInTotals>
   </dimensions>
   <dimensions uuid="607d2227-c4cf-4f8e-91f4-315769755dad">
-    <name>ВКМ_Договор</name>
+    <name>Договор</name>
     <synonym>
       <key>ru</key>
-      <value>ВКМ договор</value>
+      <value>Договор</value>
     </synonym>
     <type>
       <types>CatalogRef.ДоговорыКонтрагентов</types>

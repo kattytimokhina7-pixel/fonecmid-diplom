@@ -37,7 +37,7 @@
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="cfc49739-86fc-4295-a32f-0082904a9aa2">
-    <name>ВКМ_Клиент</name>
+    <name>Клиент</name>
     <synonym>
       <key>ru</key>
       <value>Клиент</value>
@@ -52,7 +52,7 @@
     <dataHistory>Use</dataHistory>
   </attributes>
   <attributes uuid="f308a251-294b-45ac-89ed-a83c25ba01b1">
-    <name>ВКМ_Договор</name>
+    <name>Договор</name>
     <synonym>
       <key>ru</key>
       <value>Договор</value>
@@ -64,14 +64,14 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <choiceParameterLinks>
       <name>Отбор.Владелец</name>
-      <field>Document.ВКМ_ОбслуживаниеКлиента.Attribute.ВКМ_Клиент</field>
+      <field>Document.ВКМ_ОбслуживаниеКлиента.Attribute.Клиент</field>
     </choiceParameterLinks>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
   <attributes uuid="c94c0b2b-9754-4ef4-bd21-e1f84ee17f82">
-    <name>ВКМ_Специалист</name>
+    <name>Специалист</name>
     <synonym>
       <key>ru</key>
       <value>Специалист</value>
@@ -86,7 +86,7 @@
     <dataHistory>Use</dataHistory>
   </attributes>
   <attributes uuid="a1782dfd-63af-4492-9489-9b0c0382e832">
-    <name>ВКМ_ДатаПроведенияРабот</name>
+    <name>ДатаПроведенияРабот</name>
     <synonym>
       <key>ru</key>
       <value>Дата проведения работ</value>
@@ -104,7 +104,7 @@
     <dataHistory>Use</dataHistory>
   </attributes>
   <attributes uuid="e4d09109-5e30-407a-87c0-241dfbeba655">
-    <name>ВКМ_ВремяНачалаРабот</name>
+    <name>ВремяНачалаРабот</name>
     <synonym>
       <key>ru</key>
       <value>Время начала работ</value>
@@ -122,7 +122,7 @@
     <dataHistory>Use</dataHistory>
   </attributes>
   <attributes uuid="67a14a24-5025-4cf6-8b28-6f23df4fa371">
-    <name>ВКМ_ВремяОкончанияРабот</name>
+    <name>ВремяОкончанияРабот</name>
     <synonym>
       <key>ru</key>
       <value>Время окончания работ</value>
@@ -140,7 +140,7 @@
     <dataHistory>Use</dataHistory>
   </attributes>
   <attributes uuid="bf876beb-cba4-4b8a-86d0-01c6bc5c75eb">
-    <name>ВКМ_ОписаниеПроблемы</name>
+    <name>ОписаниеПроблемы</name>
     <synonym>
       <key>ru</key>
       <value>Описание проблемы</value>
@@ -156,7 +156,7 @@
     <dataHistory>Use</dataHistory>
   </attributes>
   <attributes uuid="7082b308-6941-4033-bad2-6b2e71e179d4">
-    <name>ВКМ_Комментарий</name>
+    <name>Комментарий</name>
     <synonym>
       <key>ru</key>
       <value>Комментарий</value>
@@ -195,13 +195,13 @@
       <objectType typeId="0ca4cd7f-8c7c-4345-9c19-286678ab2578" valueTypeId="bdfeee7b-4fe3-48a4-a1a7-901ac98a06cb"/>
       <rowType typeId="4e845411-147e-427e-a913-b6f0e5161254" valueTypeId="79e12e6f-49ae-4a6c-a116-390659122df1"/>
     </producedTypes>
-    <name>ВКМ_ВыполненныеРаботы</name>
+    <name>ВыполненныеРаботы</name>
     <synonym>
       <key>ru</key>
       <value>Выполненные работы</value>
     </synonym>
     <attributes uuid="09d3d575-4952-4996-9e36-9db8b7578cab">
-      <name>ВКМ_ОписаниеРабот</name>
+      <name>ОписаниеРабот</name>
       <synonym>
         <key>ru</key>
         <value>Описание работ</value>
@@ -217,7 +217,7 @@
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
     <attributes uuid="61eaeeb9-99a6-43e6-a09c-ec39b6b6cc1d">
-      <name>ВКМ_ФактическиПотраченоЧасов</name>
+      <name>ФактическиПотраченоЧасов</name>
       <synonym>
         <key>ru</key>
         <value>Фактически потрачено часов</value>
@@ -235,7 +235,7 @@
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
     <attributes uuid="b3bc3198-0705-4290-b899-9a733514fbbb">
-      <name>ВКМ_ЧасыКОплатеКлиенту</name>
+      <name>ЧасыКОплатеКлиенту</name>
       <synonym>
         <key>ru</key>
         <value>Часы к оплате клиенту</value>

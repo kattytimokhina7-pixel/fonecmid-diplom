@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="eb95c6cd-1dc0-4c87-863a-07d740de40d8">
+  <producedTypes>
+    <objectType typeId="0f95d5ec-632e-4cbc-8df0-5ddbe2df4689" valueTypeId="0e3541bb-aef9-4db2-b486-38686180e879"/>
+    <managerType typeId="18fdc13b-0f7a-4beb-9f74-3aedae2a69e9" valueTypeId="3e8da43f-4bbf-4548-97ad-8403c95e33fa"/>
+  </producedTypes>
+  <name>ВКМ_МассовоеСозданиеАктов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Массовое создание актов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ВКМ_МассовоеСозданиеАктов.Form.Форма</defaultForm>
+  <attributes uuid="c5f229dc-2bc0-459b-ab4a-d9d8273edad2">
+    <name>Период</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период</value>
+    </synonym>
+    <type>
+      <types>StandardPeriod</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="23f325a8-9d0b-4b72-868d-642701f65d21">
+    <producedTypes>
+      <objectType typeId="79f0f47d-c7fe-4d5f-af5a-618c4548baca" valueTypeId="a247b226-102a-4823-9880-4104ddd67b11"/>
+      <rowType typeId="5646df9d-0499-45af-b10a-6db1d1128a3f" valueTypeId="75670832-f3b0-40cf-8f86-ec40135f8c7c"/>
+    </producedTypes>
+    <name>Договоры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договоры</value>
+    </synonym>
+    <attributes uuid="1f496f68-512c-4a53-b985-8430950d2a1a">
+      <name>Договор</name>
+      <synonym>
+        <key>ru</key>
+        <value>Договор</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ДоговорыКонтрагентов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="548a84b2-9b36-4635-a9f6-ddced829b46b">
+      <name>ДокРеализация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ реализации</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.РеализацияТоваровУслуг</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="f90d56be-910b-4bb2-a571-5c48b18f95cb">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

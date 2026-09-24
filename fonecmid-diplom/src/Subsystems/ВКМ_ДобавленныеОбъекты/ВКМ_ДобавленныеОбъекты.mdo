@@ -17,4 +17,5 @@
   <content>Role.ВКМ_РаботаСОбслуживаниемКлиентов</content>
   <content>Constant.ВКМ_НоменклатураРаботыСпециалиста</content>
   <content>Constant.ВКМ_НоменклатураАбонентскаяПлата</content>
+  <content>DataProcessor.ВКМ_МассовоеСозданиеАктов</content>
 </mdclass:Subsystem>
