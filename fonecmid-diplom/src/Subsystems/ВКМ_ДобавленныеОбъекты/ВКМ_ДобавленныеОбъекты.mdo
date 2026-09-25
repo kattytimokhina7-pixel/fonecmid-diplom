@@ -14,7 +14,6 @@
   <content>CommonModule.ВКМ_ТелеграмВызовСервера</content>
   <content>Catalog.ВКМ_УведомленияТелеграмБоту</content>
   <content>ScheduledJob.ВКМ_ОтправкаУведомленийТелеграм</content>
-  <content>Role.ВКМ_РаботаСОбслуживаниемКлиентов</content>
   <content>Constant.ВКМ_НоменклатураРаботыСпециалиста</content>
   <content>Constant.ВКМ_НоменклатураАбонентскаяПлата</content>
   <content>DataProcessor.ВКМ_МассовоеСозданиеАктов</content>
@@ -31,4 +30,8 @@
   <content>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</content>
   <content>Document.ВКМ_ВыплатыЗарплаты</content>
   <content>Document.ВКМ_ГрафикиОтпусков</content>
+  <content>Role.ВКМ_ДобавлениеИзменениеОбслуживанияКлиентов</content>
+  <content>Role.ВКМ_ИспользованиеМассовогоСозданияРеализаций</content>
+  <content>Role.ВКМ_ДобавлениеИзменениеРеализаций</content>
+  <content>Role.ВКМ_ДобавлениеИзменениеНачисленийЗаработнойПлаты</content>
 </mdclass:Subsystem>
