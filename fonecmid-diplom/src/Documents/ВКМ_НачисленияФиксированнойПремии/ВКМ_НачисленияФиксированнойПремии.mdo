@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0acd1de3-35ef-4576-b81a-7b2fc944695d">
+  <producedTypes>
+    <objectType typeId="c74564c8-b617-4d7e-871f-601d8cdd77bb" valueTypeId="5c44ffaa-26e6-4712-9eb3-ec2e5ab9f4f7"/>
+    <refType typeId="481e102f-8944-44d2-a100-840958f5ba86" valueTypeId="bb706108-94c1-43b2-8b0c-84bab609de02"/>
+    <selectionType typeId="01b6a99d-8988-4a79-a790-2d2abdbc68dd" valueTypeId="12420a8b-5e5c-41e6-b7a8-250743fe0ca8"/>
+    <listType typeId="651d072c-8823-40e0-8002-23a76bcdaa88" valueTypeId="2502ddc8-7cb5-4d06-a8b5-8b819d5a42b8"/>
+    <managerType typeId="abf8a2c0-fb1d-42dc-bf45-11b6f0e1401d" valueTypeId="c31194f9-e6e1-46d8-9dab-d7680efd063c"/>
+  </producedTypes>
+  <name>ВКМ_НачисленияФиксированнойПремии</name>
+  <synonym>
+    <key>ru</key>
+    <value>Начисления фиксированной премии</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ВКМ_НачисленияФиксированнойПремии.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Начисление фиксированной премии</value>
+  </objectPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Начисления фиксированной премии</value>
+  </listPresentation>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ВКМ_НачисленияФиксированнойПремии.Form.ФормаДокумента</defaultObjectForm>
+  <registerRecords>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="46edfaf3-58f4-4143-a151-29dda73e4e75">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="c8a7e687-a7bb-40d9-8474-30cbd787d35b">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="5df77307-bd87-4345-a041-4dc7b401b475">
+    <producedTypes>
+      <objectType typeId="0670bab3-1aef-4ae0-9582-4bde35e4d78e" valueTypeId="73427b00-15f0-4fb0-8008-66bfb55ddd1e"/>
+      <rowType typeId="89ad95c1-2555-4a95-9d92-d5c433eb9465" valueTypeId="037f1b42-26b1-40c5-ac51-46e61a9d8f41"/>
+    </producedTypes>
+    <name>СписокСотрудников</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список сотрудников</value>
+    </synonym>
+    <attributes uuid="e7767764-cd10-435c-b9ce-3db8b5b21709">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВКМ_Сотрудники</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0a0890ec-1dad-45e5-9df5-09fc42d212cd">
+      <name>СуммаПремии</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма премии</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

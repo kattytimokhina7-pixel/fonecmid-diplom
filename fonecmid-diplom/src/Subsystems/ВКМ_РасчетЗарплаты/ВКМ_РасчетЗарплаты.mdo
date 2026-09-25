@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ed04b54c-f643-4202-957a-a576c8f77c25">
+  <name>ВКМ_РасчетЗарплаты</name>
+  <synonym>
+    <key>ru</key>
+    <value>ВКМ расчет зарплаты</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Catalog.ВКМ_Сотрудники</content>
+  <content>Catalog.ВКМ_ГрафикиРаботы</content>
+  <content>InformationRegister.BKM_ГрафикиРаботы</content>
+  <content>InformationRegister.ВКМ_УсловияОплатыСотрудников</content>
+  <content>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</content>
+  <content>Document.ВКМ_НачисленияЗарплаты</content>
+  <content>CalculationRegister.ВКМ_ОсновныеНачисления</content>
+  <content>CalculationRegister.ВКМ_ДополнительныеНачисления</content>
+  <content>CalculationRegister.ВКМ_Удержания</content>
+  <content>Document.ВКМ_НачисленияФиксированнойПремии</content>
+  <content>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</content>
+</mdclass:Subsystem>
