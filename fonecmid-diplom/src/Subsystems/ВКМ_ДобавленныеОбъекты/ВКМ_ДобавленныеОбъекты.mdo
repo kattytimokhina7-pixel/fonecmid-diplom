@@ -34,4 +34,7 @@
   <content>Role.ВКМ_ИспользованиеМассовогоСозданияРеализаций</content>
   <content>Role.ВКМ_ДобавлениеИзменениеРеализаций</content>
   <content>Role.ВКМ_ДобавлениеИзменениеНачисленийЗаработнойПлаты</content>
+  <content>Report.ВКМ_ВыработкаСпециалистов</content>
+  <content>Report.ВКМ_АнализВыставленныхАктов</content>
+  <content>Report.ВКМ_РасчетыССотрудниками</content>
 </mdclass:Subsystem>
