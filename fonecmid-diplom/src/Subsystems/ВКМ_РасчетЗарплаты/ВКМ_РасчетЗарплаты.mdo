@@ -18,4 +18,5 @@
   <content>CalculationRegister.ВКМ_Удержания</content>
   <content>Document.ВКМ_НачисленияФиксированнойПремии</content>
   <content>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</content>
+  <content>Document.ВКМ_ВыплатыЗарплаты</content>
 </mdclass:Subsystem>

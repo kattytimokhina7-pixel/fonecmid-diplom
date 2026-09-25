@@ -350,7 +350,7 @@
     </notDefaultUseAlwaysAttributes>
     <main>true</main>
     <extInfo xsi:type="form:DynamicListExtInfo">
-      <mainTable>Document.ВКМ_НачисленияЗарплаты</mainTable>
+      <mainTable>Document.ВКМ_НачисленияФиксированнойПремии</mainTable>
       <dynamicDataRead>true</dynamicDataRead>
       <autoFillAvailableFields>true</autoFillAvailableFields>
       <autoSaveUserSettings>true</autoSaveUserSettings>
