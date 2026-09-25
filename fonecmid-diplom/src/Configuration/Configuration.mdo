@@ -1237,6 +1237,7 @@
   <documents>Document.ВКМ_НачисленияЗарплаты</documents>
   <documents>Document.ВКМ_НачисленияФиксированнойПремии</documents>
   <documents>Document.ВКМ_ВыплатыЗарплаты</documents>
+  <documents>Document.ВКМ_ГрафикиОтпусков</documents>
   <documentJournals>DocumentJournal.Деньги</documentJournals>
   <enums>Enum.ВариантыОтображенияМеток</enums>
   <enums>Enum.ВариантыОчисткиФайлов</enums>
