@@ -17,6 +17,7 @@
   <useStandardCommands>true</useStandardCommands>
   <periodicity>Month</periodicity>
   <actionPeriod>true</actionPeriod>
+  <basePeriod>true</basePeriod>
   <schedule>InformationRegister.BKM_ГрафикиРаботы</schedule>
   <scheduleValue>InformationRegister.BKM_ГрафикиРаботы.Resource.Значение</scheduleValue>
   <scheduleDate>InformationRegister.BKM_ГрафикиРаботы.Dimension.Дата</scheduleDate>
@@ -37,6 +38,22 @@
       <numberQualifiers>
         <precision>15</precision>
         <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="da03f3f9-81a7-4bc3-a460-45bbcc519722">
+    <name>РабочихДней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рабочих дней</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
       </numberQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>

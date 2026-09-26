@@ -17,6 +17,7 @@
   <useStandardCommands>true</useStandardCommands>
   <editType>InDialog</editType>
   <informationRegisterPeriodicity>Year</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
   <dataLockControlMode>Managed</dataLockControlMode>
   <resources uuid="ea21a483-6d7e-4c11-a75e-837b02628e27">
     <name>ПлановаяПродолжительностьОтпуска</name>

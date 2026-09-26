@@ -16,10 +16,6 @@
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <periodicity>Month</periodicity>
-  <actionPeriod>true</actionPeriod>
-  <schedule>InformationRegister.BKM_ГрафикиРаботы</schedule>
-  <scheduleValue>InformationRegister.BKM_ГрафикиРаботы.Resource.Значение</scheduleValue>
-  <scheduleDate>InformationRegister.BKM_ГрафикиРаботы.Dimension.Дата</scheduleDate>
   <chartOfCalculationTypes>ChartOfCalculationTypes.ВКМ_ДополнительныеНачисления</chartOfCalculationTypes>
   <dataLockControlMode>Managed</dataLockControlMode>
   <listPresentation>

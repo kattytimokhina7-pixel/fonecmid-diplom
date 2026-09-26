@@ -34,6 +34,8 @@
   <defaultObjectForm>Document.ВКМ_НачисленияФиксированнойПремии.Form.ФормаДокумента</defaultObjectForm>
   <defaultListForm>Document.ВКМ_НачисленияФиксированнойПремии.Form.ФормаСписка</defaultListForm>
   <registerRecords>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</registerRecords>
+  <registerRecords>CalculationRegister.ВКМ_ДополнительныеНачисления</registerRecords>
+  <registerRecords>CalculationRegister.ВКМ_Удержания</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="46edfaf3-58f4-4143-a151-29dda73e4e75">

@@ -58,13 +58,5 @@
       <base>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления.Оклад</base>
       <leading>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления.Оклад</leading>
     </items>
-    <items id="7591e33c-0d3e-4717-9eee-5ec9981c5f7b">
-      <name>ПроцентОтРабот</name>
-      <description>Процент от работ</description>
-      <code xsi:type="core:StringValue">
-        <value>006</value>
-      </code>
-      <displaced>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления.Отпуск</displaced>
-    </items>
   </predefined>
 </mdclass:ChartOfCalculationTypes>
