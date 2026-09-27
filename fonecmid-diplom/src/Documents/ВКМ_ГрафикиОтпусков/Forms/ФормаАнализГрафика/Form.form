@@ -248,6 +248,7 @@
       <types>String</types>
       <stringQualifiers/>
     </valueType>
+    <keyParameter>true</keyParameter>
   </parameters>
   <commandInterface>
     <navigationPanel/>
