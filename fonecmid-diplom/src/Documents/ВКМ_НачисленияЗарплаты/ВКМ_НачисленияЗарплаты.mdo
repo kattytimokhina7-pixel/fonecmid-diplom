@@ -38,6 +38,7 @@
   <registerRecords>CalculationRegister.ВКМ_Удержания</registerRecords>
   <registerRecords>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</registerRecords>
   <registerRecords>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</registerRecords>
+  <registerRecords>AccumulationRegister.ВКМ_ФактическиеОтпуска</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="a5ece493-8e78-4625-846c-08af612669c8">

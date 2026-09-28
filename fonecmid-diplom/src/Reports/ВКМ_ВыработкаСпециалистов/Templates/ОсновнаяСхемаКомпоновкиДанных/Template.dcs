@@ -14,35 +14,35 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ЧасовКОплате</dataPath>
-			<field>ЧасовКОплате</field>
+			<dataPath>ОтработаноЧасов</dataPath>
+			<field>ОтработаноЧасов</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Часов к оплате</v8:content>
+					<v8:content>Отработано часов</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаКОплате</dataPath>
-			<field>СуммаКОплате</field>
+			<dataPath>СуммаВыплатКлиентов</dataPath>
+			<field>СуммаВыплатКлиентов</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сумма к оплате</v8:content>
+					<v8:content>Сумма выплат клиентов</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ВКМ_ВыполненныеСотрудникомРаботыОбороты.Сотрудник КАК Сотрудник,
-	СУММА(ЕСТЬNULL(ВКМ_ВыполненныеСотрудникомРаботыОбороты.ЧасовКОплатеОборот, 0)) КАК ЧасовКОплате,
-	СУММА(ЕСТЬNULL(ВКМ_ВыполненныеСотрудникомРаботыОбороты.СуммаКОплатеОборот, 0)) КАК СуммаКОплате
+	ВКМ_ВыполненныеСотрудникомРаботыОстаткиИОбороты.Сотрудник КАК Сотрудник,
+	СУММА(ЕСТЬNULL(ВКМ_ВыполненныеСотрудникомРаботыОстаткиИОбороты.ЧасовКОплатеПриход, 0)) КАК ОтработаноЧасов,
+	СУММА(ЕСТЬNULL(ВКМ_ВыполненныеСотрудникомРаботыОстаткиИОбороты.СуммаКОплатеПриход, 0)) КАК СуммаВыплатКлиентов
 ИЗ
-	РегистрНакопления.ВКМ_ВыполненныеСотрудникомРаботы.Обороты(&amp;НачалоПериода, &amp;КонецПериода) КАК
-		ВКМ_ВыполненныеСотрудникомРаботыОбороты
+	РегистрНакопления.ВКМ_ВыполненныеСотрудникомРаботы.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода,,,) КАК
+		ВКМ_ВыполненныеСотрудникомРаботыОстаткиИОбороты
 СГРУППИРОВАТЬ ПО
-	ВКМ_ВыполненныеСотрудникомРаботыОбороты.Сотрудник</query>
+	ВКМ_ВыполненныеСотрудникомРаботыОстаткиИОбороты.Сотрудник</query>
 	</dataSet>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -97,18 +97,23 @@
 		<use>Always</use>
 	</parameter>
 	<settingsVariant>
-		<dcsset:name>Основной</dcsset:name>
-		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:name>Выработка специалистов</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выработка специалистов</v8:content>
+			</v8:item>
+		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Сотрудник</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ЧасовКОплате</dcsset:field>
+					<dcsset:field>ОтработаноЧасов</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СуммаКОплате</dcsset:field>
+					<dcsset:field>СуммаВыплатКлиентов</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>

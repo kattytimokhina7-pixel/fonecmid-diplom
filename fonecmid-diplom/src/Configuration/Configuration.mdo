@@ -630,6 +630,9 @@
   <roles>Role.ВКМ_ИспользованиеМассовогоСозданияРеализаций</roles>
   <roles>Role.ВКМ_ДобавлениеИзменениеРеализаций</roles>
   <roles>Role.ВКМ_ДобавлениеИзменениеНачисленийЗаработнойПлаты</roles>
+  <roles>Role.ВКМ_ОтчетВыроботкаСпециалистов</roles>
+  <roles>Role.ВКМ_ОтчетАнализАктов</roles>
+  <roles>Role.ВКМ_ОтчетРасчетЗаработнойПлаты</roles>
   <commonTemplates>CommonTemplate.ДанныеПечатиОбщиеРеквизиты</commonTemplates>
   <commonTemplates>CommonTemplate.ДанныеПечатиРегистрСимволов</commonTemplates>
   <commonTemplates>CommonTemplate.ИнструкцияКакВыполнитьНастройкуМакетаOfficeOpen</commonTemplates>
@@ -1402,7 +1405,6 @@
   <informationRegisters>InformationRegister.ФиксацияОбработкиДанныхОбработчиками</informationRegisters>
   <informationRegisters>InformationRegister.BKM_ГрафикиРаботы</informationRegisters>
   <informationRegisters>InformationRegister.ВКМ_УсловияОплатыСотрудников</informationRegisters>
-  <informationRegisters>InformationRegister.ВКМ_СведенияОбОтпусках</informationRegisters>
   <accumulationRegisters>AccumulationRegister.ЗадолженностьПокупателей</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ЗадолженностьПоставщикам</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.Затраты</accumulationRegisters>
@@ -1412,6 +1414,8 @@
   <accumulationRegisters>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.ВКМ_ФактическиеОтпуска</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.ВКМ_ПлановыеОтпуска</accumulationRegisters>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения</chartsOfCharacteristicTypes>
   <chartsOfCalculationTypes>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления</chartsOfCalculationTypes>
   <chartsOfCalculationTypes>ChartOfCalculationTypes.ВКМ_ДополнительныеНачисления</chartsOfCalculationTypes>

@@ -37,4 +37,10 @@
   <content>Report.ВКМ_ВыработкаСпециалистов</content>
   <content>Report.ВКМ_АнализВыставленныхАктов</content>
   <content>Report.ВКМ_РасчетыССотрудниками</content>
+  <content>Report.ВКМ_РасходЗапланированныхОтпусков</content>
+  <content>AccumulationRegister.ВКМ_ФактическиеОтпуска</content>
+  <content>AccumulationRegister.ВКМ_ПлановыеОтпуска</content>
+  <content>Role.ВКМ_ОтчетВыроботкаСпециалистов</content>
+  <content>Role.ВКМ_ОтчетАнализАктов</content>
+  <content>Role.ВКМ_ОтчетРасчетЗаработнойПлаты</content>
 </mdclass:Subsystem>

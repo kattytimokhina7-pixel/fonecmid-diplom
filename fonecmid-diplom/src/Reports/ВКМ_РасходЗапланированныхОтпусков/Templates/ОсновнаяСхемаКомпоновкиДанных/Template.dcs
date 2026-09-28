@@ -28,44 +28,38 @@
 			<dataPath>Год</dataPath>
 			<field>Год</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОстатокДней</dataPath>
+			<field>ОстатокДней</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток дней</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ВКМ_СведенияОбОтпускахСрезПоследних.Сотрудник КАК Сотрудник,
-	ВКМ_СведенияОбОтпускахСрезПоследних.ПлановаяПродолжительностьОтпуска КАК ДниПлан
-ПОМЕСТИТЬ ВТ_План
+	ВКМ_ПлановыеОтпускаОбороты.Сотрудник КАК Сотрудник,
+	СУММА(ВКМ_ПлановыеОтпускаОбороты.ДнейОтпускаОборот) КАК ДниПлан,
+	ЕСТЬNULL(СУММА(ВКМ_ФактическиеОтпускаОбороты.ДнейОтпускаОборот), 0) КАК ДниФакт,
+	СУММА(ВКМ_ПлановыеОтпускаОбороты.ДнейОтпускаОборот) -
+		ЕСТЬNULL(СУММА(ВКМ_ФактическиеОтпускаОбороты.ДнейОтпускаОборот), 0) КАК ОстатокДней
 ИЗ
-	РегистрСведений.ВКМ_СведенияОбОтпусках.СрезПоследних(&amp;Период, Год = ГОД(&amp;Период)) КАК
-		ВКМ_СведенияОбОтпускахСрезПоследних
-;
-
-////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
-	ВКМ_ОсновныеНачисленияДанныеГрафика.Сотрудник КАК Сотрудник,
-	СУММА(ВКМ_ОсновныеНачисленияДанныеГрафика.Результат) КАК ДниФакт
-ПОМЕСТИТЬ ВТ_Факт
-ИЗ
-	РегистрРасчета.ВКМ_ОсновныеНачисления.ДанныеГрафика(ВидРасчета = &amp;Отпуск
-	И ГОД(ПериодДействия) = ГОД(&amp;Период)) КАК ВКМ_ОсновныеНачисленияДанныеГрафика
+	РегистрНакопления.ВКМ_ПлановыеОтпуска.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Год,) КАК ВКМ_ПлановыеОтпускаОбороты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ВКМ_ФактическиеОтпуска.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Год,) КАК
+			ВКМ_ФактическиеОтпускаОбороты
+		ПО ВКМ_ПлановыеОтпускаОбороты.Сотрудник = ВКМ_ФактическиеОтпускаОбороты.Сотрудник
+		И ВКМ_ПлановыеОтпускаОбороты.Год = ВКМ_ФактическиеОтпускаОбороты.Год
 СГРУППИРОВАТЬ ПО
-	ВКМ_ОсновныеНачисленияДанныеГрафика.Сотрудник
-;
-
-////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
-	ВТ_План.Сотрудник КАК Сотрудник,
-	ВТ_План.ДниПлан КАК ДниПлан,
-	ЕСТЬNULL(ВТ_Факт.ДниФакт, 0) КАК ДниФакт
-ИЗ
-	ВТ_План КАК ВТ_План
-		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Факт КАК ВТ_Факт
-		ПО ВТ_План.Сотрудник = ВТ_Факт.Сотрудник</query>
+	ВКМ_ПлановыеОтпускаОбороты.Сотрудник</query>
 	</dataSet>
 	<parameter>
-		<name>Период</name>
+		<name>НачалоПериода</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Период</v8:content>
+				<v8:content>Начало периода</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -74,22 +68,27 @@
 				<v8:DateFractions>DateTime</v8:DateFractions>
 			</v8:DateQualifiers>
 		</valueType>
-		<useRestriction>false</useRestriction>
-		<denyIncompleteValues>true</denyIncompleteValues>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
-		<name>Отпуск</name>
+		<name>КонецПериода</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Отпуск</v8:content>
+				<v8:content>Конец периода</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCalculationTypesRef.ВКМ_ОсновныеНачисления</v8:Type>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
 		</valueType>
-		<useRestriction>false</useRestriction>
-		<denyIncompleteValues>true</denyIncompleteValues>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+		<availableAsField>false</availableAsField>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
@@ -105,19 +104,10 @@
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ДниФакт</dcsset:field>
 				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОстатокДней</dcsset:field>
+				</dcsset:item>
 			</dcsset:selection>
-			<dcsset:dataParameters>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Период</dcscor:parameter>
-					<dcsset:userSettingID>5ea32ec3-933a-45ae-b5bd-f2a3d207ba87</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Отпуск</dcscor:parameter>
-					<dcsset:userSettingID>c13f989a-a074-42ad-a30d-b60d063f5882</dcsset:userSettingID>
-				</dcscor:item>
-			</dcsset:dataParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:order>
 					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>

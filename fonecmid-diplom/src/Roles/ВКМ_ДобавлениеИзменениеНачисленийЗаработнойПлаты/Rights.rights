@@ -348,6 +348,10 @@
 			<name>Edit</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
 	</object>
 	<object>
 		<name>CalculationRegister.ВКМ_ДополнительныеНачисления</name>
@@ -391,6 +395,22 @@
 		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -558,6 +578,13 @@
 		</right>
 		<right>
 			<name>ViewDataHistory</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Subsystem.ВКМ_РасчетЗарплаты</name>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>

@@ -15,20 +15,6 @@
 			<field>Договор</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаКОплате</dataPath>
-			<field>СуммаКОплате</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаВыставлена</dataPath>
-			<field>СуммаВыставлена</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сумма выставлена</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Контрагент</dataPath>
 			<field>Контрагент</field>
 		</field>
@@ -36,31 +22,45 @@
 			<dataPath>Номенклатура</dataPath>
 			<field>Номенклатура</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПоДокументу</dataPath>
+			<field>СуммаПоДокументу</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПоАкту</dataPath>
+			<field>СуммаПоАкту</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма по акту</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ВКМ_ВыполненныеКлиентуРаботыОбороты.Клиент КАК Клиент,
-	ВКМ_ВыполненныеКлиентуРаботыОбороты.Договор КАК Договор,
-	СУММА(ЕСТЬNULL(ВКМ_ВыполненныеКлиентуРаботыОбороты.СуммаКОплатеОборот, 0)) КАК СуммаКОплате
-ПОМЕСТИТЬ ВТ_Работы
+	ВКМ_ВыполненныеКлиентуРаботы.Клиент КАК Клиент,
+	ВКМ_ВыполненныеКлиентуРаботы.Договор КАК Договор,
+	СУММА(ЕСТЬNULL(ВКМ_ВыполненныеКлиентуРаботы.СуммаКОплатеОборот, 0)) КАК СуммаПоДокументу
+ПОМЕСТИТЬ ВТ_ДанныеПоДокументу
 ИЗ
 	РегистрНакопления.ВКМ_ВыполненныеКлиентуРаботы.Обороты(&amp;НачалоПериода, &amp;КонецПериода,,) КАК
-		ВКМ_ВыполненныеКлиентуРаботыОбороты
+		ВКМ_ВыполненныеКлиентуРаботы
 СГРУППИРОВАТЬ ПО
-	ВКМ_ВыполненныеКлиентуРаботыОбороты.Клиент,
-	ВКМ_ВыполненныеКлиентуРаботыОбороты.Договор
+	ВКМ_ВыполненныеКлиентуРаботы.Клиент,
+	ВКМ_ВыполненныеКлиентуРаботы.Договор
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ
-	ВТ_Работы.Клиент КАК Клиент,
-	ВТ_Работы.Договор КАК Договор,
-	ВТ_Работы.СуммаКОплате КАК СуммаКОплате,
-	ЕСТЬNULL(ПродажиОбороты.СуммаОборот, 0) КАК СуммаВыставлена
+	ВТ_ДанныеПоДокументу.Клиент КАК Клиент,
+	ВТ_ДанныеПоДокументу.Договор КАК Договор,
+	ВТ_ДанныеПоДокументу.СуммаПоДокументу КАК СуммаПоДокументу,
+	ЕСТЬNULL(ПродажиОбороты.СуммаОборот, 0) КАК СуммаПоАкту
 ИЗ
-	ВТ_Работы КАК ВТ_Работы
+	ВТ_ДанныеПоДокументу КАК ВТ_ДанныеПоДокументу
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Продажи.Обороты(&amp;НачалоПериода, &amp;КонецПериода,,) КАК ПродажиОбороты
-		ПО ВТ_Работы.Клиент = ПродажиОбороты.Контрагент
-		И ПродажиОбороты.Номенклатура В (&amp;НоменклатураРаботыСпециалиста)</query>
+		ПО ВТ_ДанныеПоДокументу.Клиент = ПродажиОбороты.Контрагент
+		И ПродажиОбороты.Номенклатура = &amp;Номенклатура</query>
 	</dataSet>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -99,22 +99,6 @@
 		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
-		<name>НоменклатураРаботыСпециалиста</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Номенклатура работы специалиста</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Номенклатура</v8:Type>
-		</valueType>
-		<useRestriction>false</useRestriction>
-		<valueListAllowed>true</valueListAllowed>
-		<denyIncompleteValues>true</denyIncompleteValues>
-		<use>Always</use>
-	</parameter>
-	<parameter>
 		<name>Период</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -130,9 +114,28 @@
 		<denyIncompleteValues>true</denyIncompleteValues>
 		<use>Always</use>
 	</parameter>
+	<parameter>
+		<name>Номенклатура</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Номенклатура</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Номенклатура</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
 	<settingsVariant>
-		<dcsset:name>Основной</dcsset:name>
-		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:name>Анализ выставленных актов</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Анализ выставленных актов</v8:content>
+			</v8:item>
+		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -142,10 +145,10 @@
 					<dcsset:field>Договор</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СуммаВыставлена</dcsset:field>
+					<dcsset:field>СуммаПоДокументу</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СуммаКОплате</dcsset:field>
+					<dcsset:field>СуммаПоАкту</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>
@@ -157,8 +160,8 @@
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>НоменклатураРаботыСпециалиста</dcscor:parameter>
-					<dcsset:userSettingID>60f4f5ff-9be7-47e6-aef0-6884c2b1ff97</dcsset:userSettingID>
+					<dcscor:parameter>Номенклатура</dcscor:parameter>
+					<dcsset:userSettingID>c1b9bd85-0c58-4f44-936e-c794a07e6c5e</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
